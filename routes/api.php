@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,4 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+Route::get('/test',function(){
+    $response = new Response(json_encode(["msg"=>"Hello World"]));
+    return $response;
 });
