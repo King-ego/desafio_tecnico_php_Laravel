@@ -3,7 +3,6 @@
 namespace App\Repositories;
 
 use App\Exceptions\DefaultException;
-use App\Models\Api\Product\Image;
 use App\Models\Api\Product\Product;
 use App\Repositories\AbstractRepository;
 use Illuminate\Support\Facades\DB;

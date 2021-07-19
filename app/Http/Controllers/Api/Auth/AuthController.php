@@ -4,8 +4,7 @@ namespace App\Http\Controllers\Api\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AuthRequest;
-use App\Repositories\Contracts\AuthRepository;
-use Illuminate\Auth\Middleware\Authenticate;
+use App\Repositories\AuthRepository;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
@@ -28,7 +27,7 @@ class AuthController extends Controller
 
         } catch (ValidationException $e) {
             return response()->json(['status' => 'error', 'message' => $e->getMessage()], 401);
-        } catch (ValidationException $e) {
+        } catch (\Illuminate\Validation\ValidationException $e) {
             return response()->json(['status' => 'error', 'message' => 'Wrong credentials'], 401);
         }
     }

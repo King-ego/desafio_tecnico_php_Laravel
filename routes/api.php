@@ -1,9 +1,8 @@
 <?php
 
+use App\Http\Controllers\Api\Auth\AuthController;
 use App\Http\Controllers\Api\Product\ProductController;
 use App\Http\Controllers\Api\User\UserController;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,4 +40,9 @@ Route::namespace('Api')->name('products.')->prefix('products')->group(function (
         ->name('delete');
     Route::get('/', [ProductController::class, 'index'])
         ->name('getAll');
+});
+
+Route::namespace('Api')->name('auth.')->prefix('auth')->group(function () {
+    Route::post('/', [AuthController::class , 'postAuth'])
+        ->name('login');
 });
