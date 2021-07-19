@@ -23,9 +23,8 @@ You can check all the laravel related dependecies
 
 Clone the repository and setup
 
-`$ git clone https://github.com/devEzequiel/recipes-app.git` <br />
-`$ cd recipes-app` <br />
-`$ cd recipes-api`
+`$ git clone https://github.com/King-ego/desafio_tecnico_php_Laravel.git` <br />
+`$ cd rdesafio_tecnico_php_Laravel`
 
 Then, create the database and add them to the `.env` file.
 
