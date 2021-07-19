@@ -17,58 +17,58 @@
         }
 
         public function find(int $id)
-    {
-        return $this->model->find($id);
-    }
+        {
+            return $this->model->find($id);
+        }
 
-    public function all()
-    {
-        return $this->model->all();
-    }
+        public function all()
+        {
+            return $this->model->all();
+        }
 
-    public function findOrFail(int $id)
-    {
-        return $this->model->findOrFail($id);
-    }
+        public function findOrFail(int $id)
+        {
+            return $this->model->findOrFail($id);
+        }
 
-    public function whereEquals($column, $value)
-    {
-        return $this->model->where($column, $value);
-    }
+        public function whereEquals($column, $value)
+        {
+            return $this->model->where($column, $value);
+        }
 
-    public function first()
-    {
-        $this->model->first();
-    }
+        public function first()
+        {
+            $this->model->first();
+        }
 
-    public function create($data)
-    {
-        return $this->model->create($data);
-    }
+        public function create($data)
+        {
+            return $this->model->create($data);
+        }
 
-    public function update(array $data)
-    {
-        return $this->model->update($data);
-    }
+        public function update(array $data)
+        {
+            return $this->model->update($data);
+        }
 
-    public function paginate(int $integer)
-    {
-        return $this->model->paginate($integer);
-    }
+        public function paginate(int $integer)
+        {
+            return $this->model->paginate($integer);
+        }
 
-    public function paginateById(int $id, int $integer)
-    {
-        return $this->model->where('wallet_id', $id)->paginate($integer);
-    }
+        public function paginateById(int $id, int $integer)
+        {
+            return $this->model->where('wallet_id', $id)->paginate($integer);
+        }
 
-    public function orderBy($column, $clause = 'DESC')
-    {
-        return $this->model->orderBy($column, $clause);
-    }
+        public function orderBy($column, $clause = 'DESC')
+        {
+            return $this->model->orderBy($column, $clause);
+        }
 
-    public function delete()
-    {
-        return $this->model->delete();
-    }
+        public function delete()
+        {
+            return $this->model->delete();
+        }
 
     }

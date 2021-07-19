@@ -17,6 +17,7 @@ class Product extends Model
         'code',
         'amount',
         'category',
+        'composition',
         'size',
     ];
 
